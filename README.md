@@ -37,6 +37,8 @@ b) If working locally type the following command from your command line: `git cl
 
 Usually an authentication system is implemented in 4 parts:
 
+![Authentication Diagram](https://github.com/breatheco-de/jwt-authentication-with-flask-react/blob/main/.learn/login_diagram.jpeg?raw=true)
+
 ### User signup
 
 At the beginning of every application that are not users or tokens, so the first step that makes sense to build is user signup.
