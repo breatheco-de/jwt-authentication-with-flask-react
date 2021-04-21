@@ -13,6 +13,14 @@ Implement an authentication system with the following parts:
 3. **Validation**: Any page considered "private" must always validate that the current user is valid, if not, the page must redirect the user back to login.
 4. **Logout**: Any moment the user must be able to press "logout" in the navbar and it will get redirected back to the login path.
 
+At least the following pages and react components must be implemented into the project:
+
+| Path      | Component   | Functionality                                                     |
+| --------- | ----------- | ----------------------------------------------------------------- |
+| `/signup` | `<Signup>`  | Renders the signup form                                           |
+| `/login`  | `<Login>`   | Renders the login form                                            |
+| `/private`| `<Private>` | Validates that only authenticated users and render this component |
+
 ## 🌱 How to start coding this project:
 
 Do not clone this repository.
