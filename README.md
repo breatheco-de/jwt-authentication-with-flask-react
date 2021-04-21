@@ -29,15 +29,14 @@ b) If working locally type the following command from your command line: `git cl
 
 Usually an authentication system is implemented in 4 parts:
 
-### Token Validation 
+### User signup
 
-Any private view will have to always validate the user session like this:
+At the beginning of every application that are not users or tokens, so the first step that makes sense to build is user signup.
 
-1. The user types any private URL, for example: myapplication.com/private
-2. The React.js application (probably the React Router library) will detect the route `/private` and match with its corresponding React.js page component that will take care of rendering the HTML.
-3. Before rendering the HTML -and only because this is a private route- the component must verify that the sessionStorage contains the authenticated token, you normally would do that in the useEffect (component did mount) because you want to do it very early during the application loading.
-4. If sessionStorage 👎 **does not** have the token, the current user is not considered to be logged in and the component must redirect to the login view.
-5. If the sessionStorage 👍 does contain the token, the current user is successfully logged in and the rest of the `/private` view component is loaded.
+1. The user navigates to the `/signup` path.
+2. The React.js application (probably using the React Router library) will detect the route `/signup` and match with its corresponding React.js page component that will take care of rendering the signup HTML.
+3. The user picks and writes an email and password and clicks submit.
+4. The React.js page is listening to the onSubmit event, it gets triggered and the handleSubmit function fetches the email and password to the backend Pthon Flask API, probably doing a `POST /token` request with the email and password on the body payload.
 
 ### User login (start session)
 
@@ -60,6 +59,17 @@ This process occurs when the user desires to logout.
 2. The user press that button and the onClick event handler is called.
 3. The front-end application removes the token from the sessionStorage.
 4. The front-end application redirects to the home page (public).
+
+### Token Validation 
+
+Any user can just type `/private` to attempt visiting a private page, that is why we need to implement a validation that prevents the anonymus users to see the content of this page, and we must redirect the user to `/login` or any other **public** page. This is usually how the process goes:
+
+1. The user types any private URL, for example: myapplication.com/private
+2. The React.js application (probably using the React Router library) will detect the route `/private` and match with its corresponding React.js page component that will take care of rendering the HTML.
+3. Before rendering the HTML -and only because this is a private route- the component must verify that the sessionStorage contains the authenticated token, you normally would do that in the useEffect (component did mount) because you want to do it very early during the application loading.
+4. If sessionStorage 👎 **does not** have the token, the current user is not considered to be logged in and the component must redirect to the login view.
+5. If the sessionStorage 👍 does contain the token, the current user is successfully logged in and the rest of the `/private` view component is loaded.
+
 
 
 
