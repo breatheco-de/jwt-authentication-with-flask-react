@@ -4,6 +4,29 @@ Almost every website in the world has user authentication, in this project you h
 
 The use of [this template/boilerplate](https://github.com/4GeeksAcademy/react-flask-hello) is recomended to start the development, it already comes with the necesary setup and installation for start coding in one minute.
 
+## 🗒️ Instructions
+
+Implement an authentication system with the following parts:
+
+1. **Signup**: The user must be able to pick its email, any password and submit the form, a new user must be created in the database and the user must be redirected to the login form afterwards.
+2. **Login**: The user fills out its email and password and it's redirected to the private dashboard after successfull authentication.
+3. **Validation**: Any page considered "private" must always validate that the current user is valid, if not, the page must redirect the user back to login.
+4. **Logout**: Any moment the user must be able to press "logout" in the navbar and it will get redirected back to the login path.
+
+## 🌱 How to start coding this project:
+
+Do not clone this repository.
+
+1. The first step to start coding is cloning the [React.js + Flask API boilerplate](https://github.com/4GeeksAcademy/react-flask-hello) on your local computer or opening it using gitpod.
+
+a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello).
+
+b) If working locally type the following command from your command line: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
+
+💡 Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
+
+## More details about the authentication:
+
 Usually an authentication system is implemented in 4 parts:
 
 ### Token Validation 
