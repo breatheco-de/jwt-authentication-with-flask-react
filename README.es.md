@@ -10,77 +10,98 @@ Implementa un sistema de autenticación con las siguientes partes:
 
 1. **Signup**: El usuario debe poder elegir su correo electrónico, cualquier contraseña y enviar el formulario, se debe crear un nuevo usuario en la base de datos y luego se debe redirigir al usuario al formulario de inicio de sesión.
 
-The user must be able to pick its email, any password and submit the form, a new user must be created in the database and the user must be redirected to the login form afterwards.
-2. **Login**: The user fills out its email and password and it's redirected to the private dashboard after successfull authentication.
-3. **Validation**: Any page considered "private" must always validate that the current user is valid, if not, the page must redirect the user back to login.
-4. **Logout**: Any moment the user must be able to press "logout" in the navbar and it will get redirected back to the login path.
+2. **Login**: El usuario ingresa su correo electrónico y su contraseña y es redireccionado al panel de control (dashboard) luego de una autenticación exitosa.
 
-At least the following pages and react components must be implemented into the project:
+3. **Validation**: Cualquier página considerada como "privada" siempre debe validar al usuario, sino la página web debe redireccionar al usuario de regreso al **login**.
 
-| Path      | Component   | Functionality                                                     |
+4. **Logout**: En cualquier momento el usuario debe poder hacer en clic en **logout** en la barra de navegación (navbar) y ser redireccionado a **login**.
+
+
++ Como mínimo, las siguientes vistas y componentes react deben implementarse en este proyecto:
+
+
+|Path (tuta)| Componente   | Functionalidad                                                   |
 | --------- | ----------- | ----------------------------------------------------------------- |
-| `/signup` | `<Signup>`  | Renders the signup form                                           |
-| `/login`  | `<Login>`   | Renders the login form                                            |
-| `/private`| `<Private>` | Validates that only authenticated users and render this component |
+| `/signup` | `<Signup>`  | Muestra el formulario para registrarse                            |
+| `/login`  | `<Login>`   | Muestra el formulario para ingresar                               |
+| `/private`| `<Private>` | Valida a los usuarios autenticados y muestra este componente      |
 
-## 🌱 How to start coding this project:
+# 🌱 Cómo empezar a codificar este proyecto:
 
-Do not clone this repository.
+No clones este repositorio.
 
-1. The first step to start coding is cloning the [React.js + Flask API boilerplate](https://github.com/4GeeksAcademy/react-flask-hello) on your local computer or opening it using gitpod.
+1. El primer paso es clonar [el boilerplate React.js + Flask API ](https://github.com/4GeeksAcademy/react-flask-hello) en tu computador localmente o abrirlo con Gitpod:
 
-a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello).
+a) Si usas Gitpod (recomendado), puedes clonar el texto estándar haciendo clic [aquí](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello).
 
-b) If working locally type the following command from your command line: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
+b) Si trabajas localmente, escribe lo siguiente en tu línea de comando: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
 
-💡 Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
++ 💡 Recuerda crear un nuevo repositorio, actualizar el remoto (`git remote set-url origin <su nueva url>`) y actualizar el código en tu nuevo repositorio usando `add`,`commit` y `push`.
+### Más detalles sobre la autenticación:
 
-## More details about the authentication:
-
-Usually an authentication system is implemented in 4 parts:
+Por lo general, un sistema de autenticación se implementa en 4 partes:
 
 ![Authentication Diagram](https://github.com/breatheco-de/jwt-authentication-with-flask-react/blob/main/.learn/login_diagram.jpeg?raw=true)
 
-### User signup
+### Registro de usuario (signup):
 
-At the beginning of every application that are not users or tokens, so the first step that makes sense to build is user signup.
+Al comienzo de cada aplicación que no son usuarios o tokens, por lo que el primer paso que tiene sentido para construir es el registro del usuario.
 
-1. The user navigates to the `/signup` path.
-2. The React.js application (probably using the React Router library) will detect the route `/signup` and match with its corresponding React.js page component that will take care of rendering the signup HTML.
-3. The user picks and writes an email and password and clicks submit.
-4. The React.js page is listening to the onSubmit event, it gets triggered and the handleSubmit function fetches the email and password to the backend Pthon Flask API, probably doing a `POST /token` request with the email and password on the body payload.
+1. El usuario navega a la ruta (path) `/signup`.
 
-### User login (start session)
+2. La aplicación React.js (probablemente usando la librería React Router) detectará la ruta `/signup` y la hará coincidir con su componente de página React.js que se encargará de renderizar el HTML del registro.
 
-This part of the process occurs only when new tokens have to be generated.
+3. El usuario escoge y escribe un correo electrónico y una contraseña y hace clic en enviar.
 
-1. The user lands in the myapplication.com/login path.
-2. The React.js application (probably using the React Router library) will detect the `/login` path and match it with its corresponding React.js page component, this page will take care of rendering the login form.
-3. The user fills the login form and submits it.
-4. The page is listening (waiting) for the form sumbit event to trigger, and it finally triggers because the user submite the form.
-5. The page now retrieves the username and password information and fetch (POST) that data to the API.
-6. The API validates that the username and password are correct and returns a `token` object.
-7. The front-end application saves that token in the sessionStorage.
-8. The front end application redirects to the `/private`.
+4. La página React.js está escuchando el evento `onSubmit`, que gatilla/activa y la función `handleSubmit` busca (fetch) el correo electrónico y la contraseña en la API de backend Python Flask, probablemente haciendo una solicitud `POST / token` con el correo electrónico y la contraseña en el cuerpo de carga útil (body payload).
+### Inicio de sesión de usuario (login)
 
-### User logout (end session)
+Esta parte del proceso ocurre solo cuando se deben generar nuevos tokens.
 
-This process occurs when the user desires to logout.
+1. El usuario llega a la ruta myapplication.com/login.
 
-1. Normally there is a button to log out somewhere in your application.
-2. The user press that button and the onClick event handler is called.
-3. The front-end application removes the token from the sessionStorage.
-4. The front-end application redirects to the home page (public).
+2. La aplicación React.js (probablemente usando la librería React Router) detectará la ruta `/login` y la emparejará con su componente de página React.js correspondiente, esta vista se encargará de renderizar el formulario de inicio de sesión.
 
-### Token Validation 
+3. El usuario llena el formulario de inicio de sesión y lo envía.
 
-Any user can just type `/private` to attempt visiting a private page, that is why we need to implement a validation that prevents the anonymus users to see the content of this page, and we must redirect the user to `/login` or any other **public** page. This is usually how the process goes:
+4. La página está escuchando (esperando) que se active/gatille el evento de `sumbit` del formulario y, finalmente se activa porque el usuario envía el formulario.
 
-1. The user types any private URL, for example: myapplication.com/private
-2. The React.js application (probably using the React Router library) will detect the route `/private` and match with its corresponding React.js page component that will take care of rendering the HTML.
-3. Before rendering the HTML -and only because this is a private route- the component must verify that the sessionStorage contains the authenticated token, you normally would do that in the useEffect (component did mount) because you want to do it very early during the application loading.
-4. If sessionStorage 👎 **does not** have the token, the current user is not considered to be logged in and the component must redirect to the login view.
-5. If the sessionStorage 👍 does contain the token, the current user is successfully logged in and the rest of the `/private` view component is loaded.
+5. La página ahora recupera la información de nombre de usuario y contraseña y recupera (`POST`) esos datos de la API.
+
+6. La API valida que el nombre de usuario y la contraseña sean correctos y devuelve un objeto `token`.
+
+7. La aplicación front-end de guarda ese `token` en `sessionStorage`.
+
+8. La aplicación front-end redirecciona a `/private`.
+
+### Cierre de sesión del usuario (finalizar sesión)
+
+Este proceso ocurre cuando el usuario desea cerrar la sesión.
+
+1. Normalmente debe haber un botón para cerrar sesión en algún lugar de su aplicación.
+
+2. El usuario presiona ese botón y se llama al event handler `onClick`.
+
+3. La aplicación front-end elimina el `token` de `sessionStorage`.
+
+4. La aplicación front-end redirecciona a la página de inicio (pública).
+
+### Validación de tokens 
+
+Cualquier usuario puede simplemente escribir `/private` para intentar visitar una página privada, es por eso que debemos implementar una validación que evite que los usuarios anónimos vean el contenido de esta página, y debemos redireccionar al usuario a `/login` o cualquier otra página **pública**. Por lo general, así es como se desarrolla el proceso:
+
+1. El usuario escribe cualquier URL privada, por ejemplo: `myapplication.com/private`
+
+2. La aplicación React.js (probablemente usando la librería React Router) detectará la ruta `/private` y hará que coincida con su componente de página React.js que se encargará de renderizar el HTML.
+
+3. Antes de renderizar el HTML, y solo porque se trata de una ruta privada, el componente debe verificar que `sessionStorage` contiene el token autenticado, normalmente lo haría en el `useEffect` (component did mount) porque desea hacerlo muy temprano durante carga de la aplicación.
+
+4. Si `sessionStorage` 👎 **no** tiene el `token`, no se considera que el usuario actual haya iniciado sesión y el componente debe redirigir a la vista de inicio de sesión.
+
+5. Si `sessionStorage` 👍 contiene el `token`, el usuario actual ha iniciado sesión correctamente y el resto del componente de vista `/private` está cargado.
+
+
+
 
 
 
