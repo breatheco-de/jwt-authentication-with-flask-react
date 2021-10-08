@@ -9,11 +9,14 @@ The use of [this template/boilerplate](https://github.com/4GeeksAcademy/react-fl
 Implement an authentication system with the following parts:
 
 1. **Signup**: The user must be able to pick its email, any password and submit the form, a new user must be created in the database and the user must be redirected to the login form afterwards.
+
 2. **Login**: The user fills out its email and password and it's redirected to your dashboard after successfull authentication.
+
 3. **Validation**: Any page considered "private" must always validate that the current user is valid, if not, the page must redirect the user back to login.
+
 4. **Logout**: Any moment the user must be able to press "logout" in the navbar and it will get redirected back to the login path.
 
-At least the following pages and react components must be implemented into the project:
++ At least the following pages and react components must be implemented into the project:
 
 | Path      | Component   | Functionality                                                     |
 | --------- | ----------- | ----------------------------------------------------------------- |
@@ -31,7 +34,7 @@ a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here
 
 b) If working locally type the following command from your command line: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
 
-💡 Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
++ 💡 Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
 
 ## More details about the authentication:
 
@@ -47,9 +50,9 @@ At the beginning of every application that are no users or tokens, so the first 
 
 2. The React.js application (probably using the React Router library) will detect the route `/signup` and match with its corresponding React.js page component that will take care of rendering the signup HTML.
 
-3. The user picks and writes an email and password and clicks submit.
+3. The user picks and writes an email and password and clicks `submit`.
 
-4. The React.js page is listening to the onSubmit event, it gets triggered and the handleSubmit function fetches the email and password to the backend Pthon Flask API, probably doing a `POST /token` request with the email and password on the body payload.
+4. The React.js page is listening to the onSubmit event, it gets triggered and the `handleSubmit` function fetches the email and password to the backend Python Flask API, probably doing a `POST /token` request with the email and password on the body payload.
 
 ### User login (start session)
 
@@ -77,9 +80,9 @@ This process occurs when the user desires to logout.
 
 1. Normally there is a button to log out somewhere in your application.
 
-2. The user press that button and the onClick event handler is called.
+2. The user press that button and the `onClick` event handler is called.
 
-3. The front-end application removes the token from the sessionStorage.
+3. The front-end application removes the token from the `sessionStorage`.
 
 4. The front-end application redirects to the home page (public).
 
@@ -87,15 +90,15 @@ This process occurs when the user desires to logout.
 
 Any user can just type `/private` to attempt visiting a private page, that is why we need to implement a validation that prevents the anonymus users to see the content of this page, and we must redirect the user to `/login` or any other **public** page. This is usually how the process goes:
 
-1. The user types any private URL, for example: myapplication.com/private
+1. The user types any private URL, for example: `myapplication.com/private`
 
 2. The React.js application (probably using the React Router library) will detect the route `/private` and match with its corresponding React.js page component that will take care of rendering the HTML.
 
-3. Before rendering the HTML -and only because this is a private route- the component must verify that the sessionStorage contains the authenticated token, you normally would do that in the useEffect (component did mount) because you want to do it very early during the application loading.
+3. Before rendering the HTML -and only because this is a private route- the component must verify that the `sessionStorage` contains the authenticated token, you normally would do that in the `useEffect` (component did mount) because you want to do it very early during the application loading.
 
-4. If sessionStorage 👎 **does not** have the token, the current user is not considered to be logged in and the component must redirect to the login view.
+4. If sessionStorage 👎 **does not** have the `token`, the current user is not considered to be logged in and the component must redirect to the login view.
 
-5. If the sessionStorage 👍 does contain the token, the current user is successfully logged in and the rest of the `/private` view component is loaded.
+5. If the sessionStorage 👍 does contain the `token`, the current user is successfully logged in and the rest of the `/private` view component is loaded.
 
 
 
