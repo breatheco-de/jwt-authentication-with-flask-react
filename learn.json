@@ -1,6 +1,6 @@
 {
 	"status": "published",
-	"title" : "Authentication sistem with Python Flask and React.js",
+	"title" : "Authentication system with Python Flask and React.js",
 	"slug" : "jwt-authentication-with-flask-react",
 	"duration" : 3,
 	"difficulty": "beginner",
