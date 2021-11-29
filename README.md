@@ -72,7 +72,7 @@ This process occurs when the user desires to logout.
 
 ### Token Validation 
 
-Any user can just type `/private` to attempt visiting a private page, that is why we need to implement a validation that prevents the anonymus users to see the content of this page, and we must redirect the user to `/login` or any other **public** page. This is usually how the process goes:
+Any user can just type `/private` to attempt visiting a private page, that is why we need to implement a validation that prevents the anonymous users to see the content of this page, and we must redirect the user to `/login` or any other **public** page. This is usually how the process goes:
 
 1. The user types any private URL, for example: myapplication.com/private
 2. The React.js application (probably using the React Router library) will detect the route `/private` and match with its corresponding React.js page component that will take care of rendering the HTML.
