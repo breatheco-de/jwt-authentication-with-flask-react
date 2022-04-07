@@ -2,7 +2,6 @@
 
 Almost every website in the world has user authentication, in this project you have to implement user authentication using the Python Flask framework for building a backend REST API and React.js and sessionStorage API for the front end web application.
 
-The use of [this template/boilerplate](https://github.com/4GeeksAcademy/react-flask-hello) is recomended to start the development, it already comes with the necesary setup and installation for start coding in one minute.
 
 ## 🗒️ Instructions
 
