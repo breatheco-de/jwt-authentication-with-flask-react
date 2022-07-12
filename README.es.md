@@ -46,7 +46,7 @@ Al principio de cada aplicación no hay usuario o tokens, asi que el primer paso
 1. El usuario navega a la ruta `/signup`.
 2. La aplicación de React.js (probablemente usando la libreria React Router) deberá detectar la ruta `/signup` y realizará emparejado con el correspondiente componente de pagina de React.js, esta página se encargará de representar el HTML del registro.
 3. El usuario escoge y escribe un correo electrónico, una contraseña y hace clic en enviar.
-4. La página de React.js esta a la espera de el evento onSubmit, este al activarse la función handleSubmit obtiene el email y contraseña de la API del Backend con python y flask, probablemente usanto una petición `POST /token` con el email y contraseña en el body payload.
+4. La página de React.js esta a la espera de el evento onSubmit, este al activarse la función handleSubmit obtiene el email y contraseña de la API del Backend con python y flask, probablemente usanto una petición `POST /user` con el email y contraseña en el body payload.
 
 ### Inicio de sesión
 
