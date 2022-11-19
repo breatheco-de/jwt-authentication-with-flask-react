@@ -8,7 +8,7 @@ Almost every website in the world has user authentication, in this project you h
 Implement an authentication system with the following parts:
 
 1. **Signup**: The user must be able to pick its email, any password and submit the form, a new user must be created in the database and the user must be redirected to the login form afterwards.
-2. **Login**: The user fills out its email and password and it's redirected to the private dashboard after successfull authentication.
+2. **Login**: The user fills out its email and password and it's redirected to the private dashboard after successful authentication.
 3. **Validation**: Any page considered "private" must always validate that the current user is valid, if not, the page must redirect the user back to login.
 4. **Logout**: Any moment the user must be able to press "logout" in the navbar and it will get redirected back to the login path.
 
@@ -28,7 +28,7 @@ Do not clone this repository.
 
 a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello).
 
-b) If working locally type the following command from your command line: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
+b) If working locally, type the following command from your command line: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
 
 💡 Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
 
@@ -54,7 +54,7 @@ This part of the process occurs only when new tokens have to be generated.
 1. The user lands in the myapplication.com/login path.
 2. The React.js application (probably using the React Router library) will detect the `/login` path and match it with its corresponding React.js page component, this page will take care of rendering the login form.
 3. The user fills the login form and submits it.
-4. The page is listening (waiting) for the form sumbit event to trigger, and it finally triggers because the user submit the form.
+4. The page is listening (waiting) for the form submit event to trigger, and it finally triggers because the user submits the form.
 5. The page now retrieves the username and password information and fetch (POST) that data to the API.
 6. The API validates that the username and password are correct and returns a `token` object.
 7. The front-end application saves that token in the sessionStorage.
