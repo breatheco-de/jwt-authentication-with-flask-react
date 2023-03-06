@@ -1,4 +1,4 @@
-# Autenticación JWT con Flask y React.jsy
+# Autenticación JWT con Flask y React.js
 
 Casi todos los sitios web en el mundo tienen autenticación de usuarios, en este proyecto debes realizar una aplicación web implementando la autenticación de usuarios usando Python y el framework Flask para construir un back-end de REST API y React.js, y sessionStorage API para el Front-end.
 
