@@ -23,17 +23,21 @@ Al menos las siguientes páginas y componentes de react deben ser implementados 
 | `/login`  | `<Login>`   | Renderizar formulario de Inicio de sesión                                    |
 | `/private`| `<Private>` | Validar que solo ingresen usuarios autenticados y renderizar este componente |
 
-## 🌱 Como comenzar a programar este proyecto:
+## 🌱 Cómo comenzar este proyecto
 
-No clones este repositorio.
+No clones este repositorio porque vamos a usar una plantilla diferente.
 
-1. El primer paso para comenzar a programar es clonar el [React.js + Flask API boilerplate](https://github.com/4GeeksAcademy/react-flask-hello) en tu computadora o abriendo usando gitpod.
+Recomendamos abrir el `React.js + Flask API boilerplate` usando una herramienta de aprovisionamiento como [Codespaces](https://4geeks.com/es/lesson/tutorial-de-github-codespaces) (recomendado) o [Gitpod](https://4geeks.com/es/lesson/como-utilizar-gitpod). Alternativamente, puedes clonarlo en tu computadora local usando el comando `git clone`.
 
-a) Si usas Gitpod (recomendado) tu puedes clonar la plantilla/boilerplate haciendo [clic aquí](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello).
+Este es el repositorio que necesitas abrir o clonar:
 
-b) Si trabajas de forma local, tipea el siguiente comando en tú linea de comando o consola: `git clone https://github.com/4GeeksAcademy/react-flask-hello`.
+```
+https://github.com/4GeeksAcademy/react-flask-hello
+```
 
-💡 Recuerda crear un nuevo repositorio, actualiza el remoto (`git remote set-url origin <tu nueva url>`), y carga el código de tu nuevo repositorio usando `add`, `commit` y `push`.
+**👉 Por favor sigue estos pasos** [cómo comenzar un proyecto de codificación](https://4geeks.com/es/lesson/como-comenzar-un-proyecto-de-codificacion).
+
+💡 Importante: Recuerda guardar y subir tu código a GitHub creando un nuevo repositorio, actualizando el remoto (`git remote set-url origin <your new url>`) y subiendo el código a tu nuevo repositorio usando los comandos `add`, `commit` y `push` desde la terminal de git.
 
 ## Más detalles sobre la autenticación:
 
@@ -81,3 +85,5 @@ Cualquier usuario puede solo tipear `/private` para intentar visitar una página
 3. Antes de renderizar el HTML -y solo porque esta es una ruta privada- el componente debe verificar que el sessionStorage contiene un token autenticado, normalmente esto se haria en el useEffect (component did mount) porque se quiere que se haga tan pronto la aplicación cargue.
 4. Si el sessionStorage 👎 **no** tiene el token, el usuario actual no está considerado como registrado y el componente debe redirigirlo a la vista del inicio de sesión.
 5. Si el sessionStorage 👍 contiene el token, el actual usuario está registrado exitosamente y el resto de la vista del componente `/private` es cargado.
+
+Este y otros proyectos son usados para [aprender a programar](https://4geeksacademy.com/es/aprender-a-programar/aprender-a-programar-desde-cero) por parte de los alumnos de 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) realizado por [Alejandro Sánchez](https://twitter.com/alesanchezr) y muchos otros contribuyentes. Conoce más sobre nuestros [Curso de Programación](https://4geeksacademy.com/es/curso-de-programacion-desde-cero?lang=es) para convertirte en [Full Stack Developer](https://4geeksacademy.com/es/coding-bootcamps/desarrollador-full-stack/?lang=es), o nuestro [Data Science Bootcamp](https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning).
