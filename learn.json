@@ -7,6 +7,7 @@
 	"difficulty": "beginner",
 	"technologies": ["python", "flask", "react.js", "javascript", "jwt"],
     "projectType": "project",
+	"autoPlay": "false",
 	"description" : "Almost every website in the world has user authentication, in this project you have to implement user authentication using the Python Flask framework for building a backend REST API and React.js and sessionStorage API for the front end web application.",
 	"preview": "https://github.com/breatheco-de/jwt-authentication-with-flask-react/blob/main/preview.jpeg?raw=true"
 }
