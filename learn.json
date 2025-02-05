@@ -1,13 +1,23 @@
 {
 	"status": "published",
-	"title" : "Authentication system with Python Flask and React.js",
+	"gitpod": true,
+	"title" : {
+    "us": "Authentication system with Python Flask and React.js",
+    "es": "Aplicación de Todolist usando React"
+},
 	"slug" : "jwt-authentication-with-flask-react",
 	"duration" : 3,
 	"template_url": "https://github.com/4GeeksAcademy/react-flask-hello"
 	"difficulty": "beginner",
 	"technologies": ["python", "flask", "react.js", "javascript", "jwt"],
-    "projectType": "project",
-	"autoPlay": "false",
-	"description" : "Almost every website in the world has user authentication, in this project you have to implement user authentication using the Python Flask framework for building a backend REST API and React.js and sessionStorage API for the front end web application.",
-	"preview": "https://github.com/breatheco-de/jwt-authentication-with-flask-react/blob/main/preview.jpeg?raw=true"
+  "projectType": "project",
+	"autoPlay": false,
+	"description" : {
+    "us": "Almost every website in the world has user authentication, in this project you have to implement user authentication using the Python Flask framework for building a backend REST API and React.js and sessionStorage API for the front end web application.",
+    "es": "Casi todos los sitios web del mundo tienen autenticación de usuarios. En este proyecto, debes implementar la autenticación de usuarios utilizando el framework Flask de Python para construir una API REST en el backend y React.js junto con la API de sessionStorage para la aplicación web en el frontend."
+},
+	"preview": "https://github.com/breatheco-de/jwt-authentication-with-flask-react/blob/main/preview.jpeg?raw=true",
+	"telemetry": {
+    "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=255"
+}
 }
