@@ -21,6 +21,8 @@ At least the following pages and React components must be implemented into the p
 | `/login`   | `<Login>`   | Renders the login form                                             |
 | `/private` | `<Private>` | Validates that only authenticated users can enter and renders this component |
 
+<onlyfor saas="false" withBanner="false">
+ 
 ## 🌱 How to start this project
 
 Do not clone this repository because we are going to be using a different template.
@@ -37,6 +39,8 @@ https://github.com/4GeeksAcademy/react-flask-hello
 
 
 > 💡 Important: Remember to save and upload your code to GitHub by creating a new repository, updating the remote (`git remote set-url origin <your new url>`), and uploading the code to your new repository using the `add`, `commit` and `push` commands from the git terminal.
+
+</onlyfor>
 
 ## More details about the authentication:
 

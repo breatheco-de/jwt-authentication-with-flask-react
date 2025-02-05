@@ -21,6 +21,8 @@ Al menos las siguientes páginas y componentes de React deben ser implementados 
 | `/login`   | `<Login>`   | Renderizar formulario de Inicio de sesión                                    |
 | `/private` | `<Private>` | Validar que solo ingresen usuarios autenticados y renderizar este componente |
 
+<onlyfor saas="false" withBanner="false">
+  
 ## 🌱 Cómo comenzar este proyecto
 
 No clones este repositorio porque vamos a usar una plantilla diferente.
@@ -36,6 +38,8 @@ https://github.com/4GeeksAcademy/react-flask-hello
 **👉 Por favor sigue estos pasos sobre** [cómo comenzar un proyecto de programación](https://4geeks.com/es/lesson/como-comenzar-un-proyecto-de-codificacion).
 
 > 💡 Importante: Recuerda guardar y subir tu código a GitHub creando un nuevo repositorio, actualizando el remoto (`git remote set-url origin <your new url>`) y subiendo el código a tu nuevo repositorio usando los comandos `add`, `commit` y `push` desde la terminal de git.
+
+</onlyfor>
 
 ## Más detalles sobre la autenticación:
 
