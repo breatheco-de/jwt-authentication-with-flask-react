@@ -7,7 +7,7 @@
 },
 	"slug" : "jwt-authentication-with-flask-react",
 	"duration" : 3,
-	"template_url": "https://github.com/4GeeksAcademy/react-flask-hello"
+	"template_url": "https://github.com/4GeeksAcademy/react-flask-hello",
 	"difficulty": "beginner",
 	"technologies": ["python", "flask", "react.js", "javascript", "jwt"],
   "projectType": "project",
